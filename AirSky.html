@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AirSky</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+      background-color: #121212;
+      scroll-behavior: smooth;
+    }
+    header {
+      height: 100vh;
+      background: url('C:\Users\ddupl\Downloads\Air12.png') no-repeat center center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      animation: fadeIn 2s ease-in-out;
+    }
+    header p {
+      font-size: 1.2rem;
+      animation: fadeIn 3s ease-in-out;
+    }
+    nav {
+      background-color: #1e1e1e;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #00bfff;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+      animation: fadeInUp 1s ease-in-out;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .soon {
+      font-size: 1.2rem;
+      color: #ccc;
+      text-align: center;
+      margin-top: 20px;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+      nav a {
+        margin: 0 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#home">Головна</a>
+    <a href="#services">Послуги</a>
+  </nav>
+
+  <header id="home">
+    <h1>AirSky</h1>
+    <p>Замовляйте авіарейси та чартерні перельоти</p>
+  </header>
+
+  <section id="services">
+    <h2>Наші послуги</h2>
+    <p class="soon">Скоро буде...</p>
+  </section>
+</body>
+</html>
