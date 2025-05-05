@@ -1,3 +1,5 @@
+Ось оновлена версія HTML-коду з доданою вкладкою "Про нас" у меню та відповідним розділом із текстом про компанію:
+
 <!DOCTYPE html>
 <html lang="uk">
 <head>
@@ -5,49 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AirSky</title>
   <style>
-    #services {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  padding: 20px;
-  background-color: #121212;
-  text-align: center;
-}
-
-#services h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-#services .soon {
-  font-size: 1.2rem;
-  opacity: 0.8;
-}
-nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: rgba(18, 18, 18, 0.9);
-  padding: 15px 30px;
-  display: flex;
-  justify-content: flex-start;
-  gap: 20px;
-  z-index: 1000;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: #1e90ff;
-}
     * {
       margin: 0;
       padding: 0;
@@ -59,44 +18,88 @@ nav a:hover {
       background-color: #121212;
       scroll-behavior: smooth;
     }
-header {
-  position: relative;
-  height: 100vh;
-  background: url('Air12.png') no-repeat center center/cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
-  animation: fadeIn 2s ease-in-out;
-  overflow: hidden;
-}
-header::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, rgba(18,18,18,0.8), rgba(18,18,18,0.95));
-  z-index: 1;
-  animation: fadeIn 3s ease-in-out;
-}
-
-header h1,
-header p {
-  position: relative;
-  z-index: 2;
-}
-
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(18, 18, 18, 0.9);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: flex-start;
+      gap: 20px;
+      z-index: 1000;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #1e90ff;
+    }
+    header {
+      position: relative;
+      height: 100vh;
+      background: url('Air12.png') no-repeat center center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      animation: fadeIn 2s ease-in-out;
+      overflow: hidden;
+    }
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(18,18,18,0.8), rgba(18,18,18,0.95));
+      z-index: 1;
+      animation: fadeIn 3s ease-in-out;
+    }
+    header h1, header p {
+      position: relative;
+      z-index: 2;
+    }
+    #services, #about {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding: 20px;
+      background-color: #121212;
+      text-align: center;
+    }
+    #services h2, #about h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    #services .soon {
+      font-size: 1.2rem;
+      opacity: 0.8;
+    }
+    #about p {
+      font-size: 1.1rem;
+      max-width: 800px;
+      line-height: 1.6;
+      opacity: 0.9;
+    }
   </style>
 </head>
 <body>
   <nav>
     <a href="#home">Головна</a>
     <a href="#services">Послуги</a>
+    <a href="#about">Про нас</a>
   </nav>
+
   <header id="home">
     <h1>AirSky</h1>
     <p>Замовляйте авіарейси та чартерні перельоти</p>
@@ -105,6 +108,15 @@ header p {
   <section id="services">
     <h2>Наші послуги</h2>
     <p class="soon">Скоро буде...</p>
+  </section>
+
+  <section id="about">
+    <h2>Про нас</h2>
+    <p>
+      Компанія <strong>AirSky</strong> — це сучасний сервіс для бронювання авіарейсів та організації чартерних перельотів. 
+      Ми прагнемо зробити повітряні подорожі зручними, доступними та безпечними для кожного. 
+      Наша команда складається з професіоналів, які завжди готові допомогти вам обрати найкращий маршрут і сервіс.
+    </p>
   </section>
 </body>
 </html>
