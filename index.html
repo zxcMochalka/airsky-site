@@ -63,9 +63,20 @@
       z-index: 1;
       animation: fadeIn 3s ease-in-out;
     }
-    header h1, header p, .plane-button {
+    header h1, header p, .plane-container {
       position: relative;
       z-index: 2;
+    }
+    .plane-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .click-counter {
+      font-size: 18px;
+      margin-bottom: 5px;
+      color: #1e90ff;
     }
     .plane-button {
       font-size: 30px;
@@ -73,7 +84,6 @@
       border: none;
       color: #1e90ff;
       cursor: pointer;
-      margin-bottom: 20px;
       transition: transform 0.3s ease;
     }
     .plane-button:hover {
@@ -143,9 +153,12 @@
   </nav>
 
   <header id="home">
-    <button class="plane-button" title="На головну">
-      <i class="fas fa-plane"></i>
-    </button>
+    <div class="plane-container">
+      <div class="click-counter" id="clickCounter">Кліків: 0</div>
+      <button class="plane-button" onclick="incrementCounter()" title="Натисни!">
+        <i class="fas fa-plane"></i>
+      </button>
+    </div>
     <h1>AirSky</h1>
     <p>Замовляйте авіарейси та чартерні перельоти</p>
   </header>
@@ -163,5 +176,13 @@
       Наша команда складається з професіоналів, які завжди готові допомогти вам обрати найкращий маршрут і сервіс.
     </p>
   </section>
+
+  <script>
+    let count = 0;
+    function incrementCounter() {
+      count++;
+      document.getElementById('clickCounter').textContent = 'Кліків: ' + count;
+    }
+  </script>
 </body>
-  </html>
+</html>
