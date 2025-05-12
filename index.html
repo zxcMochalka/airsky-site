@@ -1,5 +1,3 @@
-Ось оновлена версія HTML-коду з доданою вкладкою "Про нас" у меню та відповідним розділом із текстом про компанію:
-
 <!DOCTYPE html>
 <html lang="uk">
 <head>
@@ -67,7 +65,7 @@
       position: relative;
       z-index: 2;
     }
-    #services, #about {
+    #services {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -77,13 +75,42 @@
       background-color: #121212;
       text-align: center;
     }
-    #services h2, #about h2 {
+    #services h2 {
       font-size: 2rem;
       margin-bottom: 10px;
     }
     #services .soon {
       font-size: 1.2rem;
       opacity: 0.8;
+    }
+    #about {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding: 20px;
+      background: url('AirSky13.png') no-repeat center center/cover;
+      text-align: center;
+      position: relative;
+    }
+    #about::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(18, 18, 18, 0.8);
+      z-index: 1;
+    }
+    #about h2, #about p {
+      position: relative;
+      z-index: 2;
+    }
+    #about h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
     }
     #about p {
       font-size: 1.1rem;
@@ -119,4 +146,4 @@
     </p>
   </section>
 </body>
-</html>
+  </html
